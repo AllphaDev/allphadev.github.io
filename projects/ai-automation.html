@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AlphaDev — AI + Automation Systems</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+
+    <script>
+      (function () {
+        try {
+          var key = "alphadev-theme-v2";
+          var theme = localStorage.getItem(key) || "dark";
+          document.documentElement.classList.add("theme-preload");
+          document.addEventListener("DOMContentLoaded", function () {
+            document.documentElement.classList.remove("theme-preload");
+          });
+          if (theme === "light") {
+            document.documentElement.dataset.themeDefault = "light";
+          } else {
+            document.documentElement.dataset.themeDefault = "dark";
+          }
+        } catch (e) {
+          document.documentElement.dataset.themeDefault = "dark";
+        }
+      })();
+    </script>
+  </head>
+  <body class="theme-dark">
+    <div class="noise"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="../index.html#work">
+          <img
+            class="brand__logo"
+            src="../assets/logo.svg"
+            alt="AlphaDev logo"
+          />
+          <span class="brand__text">Alpha<span>Dev</span></span>
+        </a>
+        <nav class="nav" id="nav">
+          <a href="../index.html#services" data-i18n="nav_services">Услуги</a>
+          <a href="../index.html#work" data-i18n="nav_work">Работы</a>
+          <a
+            class="nav__cta"
+            href="../index.html#contact"
+            data-i18n="nav_contact"
+            >Связаться</a
+          >
+        </nav>
+
+        <div class="header-controls">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+            ☀️
+          </button>
+          <button id="langBtn" class="lang-btn" aria-label="Switch language">
+            EN
+          </button>
+        </div>
+
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main style="padding-top: 92px">
+      <!-- HERO / INTRO -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="ai_title">
+              AI + automation systems для контента, лидов и процессов
+            </h2>
+            <p data-i18n="ai_sub">
+              Автоматизации, которые экономят время, ускоряют обработку заявок и
+              превращают хаос в систему.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <!-- Описание услуги -->
+            <div class="card reveal">
+              <h3 data-i18n="ai_what_title">Что я делаю</h3>
+              <ul>
+                <li data-i18n="ai_what_li1">
+                  Автоматизация лидов: формы/DM → валидация → CRM/Sheets →
+                  уведомления
+                </li>
+                <li data-i18n="ai_what_li2">
+                  AI-обработка: классификация, извлечение данных, авто-сводки
+                </li>
+                <li data-i18n="ai_what_li3">
+                  Контент-система: шаблоны, сценарии, подготовка и публикация
+                </li>
+                <li data-i18n="ai_what_li4">
+                  Интеграции: API, Webhooks, Telegram, таблицы, CRM
+                </li>
+              </ul>
+
+              <h3 style="margin-top: 18px" data-i18n="ai_chains_title">
+                Типовые цепочки
+              </h3>
+              <ul>
+                <li data-i18n="ai_chains_li1">
+                  Новая заявка → AI извлечение → запись → уведомление менеджеру
+                </li>
+                <li data-i18n="ai_chains_li2">
+                  Лиды → сегментация → распределение → авто-ответы
+                </li>
+                <li data-i18n="ai_chains_li3">
+                  Данные → AI summary → weekly report в Telegram
+                </li>
+              </ul>
+
+              <div
+                style="
+                  margin-top: 14px;
+                  display: flex;
+                  gap: 10px;
+                  flex-wrap: wrap;
+                "
+              >
+                <a
+                  class="btn btn--primary"
+                  href="../index.html#contact"
+                  data-i18n="ai_btn_request"
+                  >Запросить</a
+                >
+                <a
+                  class="btn btn--ghost"
+                  href="../index.html#work"
+                  data-i18n="ai_btn_back"
+                  >Назад</a
+                >
+              </div>
+            </div>
+
+            <!-- Превью / общая иллюстрация -->
+            <div class="card reveal">
+              <h3 data-i18n="ai_looks_title">Как это выглядит</h3>
+              <div
+                style="
+                  height: 340px;
+                  border-radius: 16px;
+                  border: 1px solid var(--line);
+                  background: url('../assets/work-ai-auto.png') center/cover
+                    no-repeat;
+                "
+              ></div>
+              <p
+                style="margin-top: 10px; color: var(--muted)"
+                data-i18n="ai_looks_desc"
+              >
+                Пример связки: n8n + OpenAI + Google Sheets + Telegram.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ПРИМЕР 1: Обработка лидов из Telegram-бота -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="ai_ex1_title">Пример реализации №1</h2>
+            <p data-i18n="ai_ex1_sub">
+              Автоматический приём и квалификация лидов из Telegram
+            </p>
+          </div>
+          <div class="grid-2">
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_task_title">Задача</h3>
+              <p data-i18n="ai_ex1_task_text">
+                В Telegram-бот приходят заявки от клиентов в свободной форме.
+                Менеджеры вручную читали сообщения, пересылали в CRM и тратили
+                время на первичный опрос. Терялись лиды в нерабочее время.
+              </p>
+              <h3 data-i18n="ai_ex1_sol_title">Решение</h3>
+              <ul>
+                <li data-i18n="ai_ex1_sol_li1">
+                  Приём сообщений: бот принимает текст, фото, контакты.
+                </li>
+                <li data-i18n="ai_ex1_sol_li2">
+                  AI-анализ: GPT извлекает ключевые данные (имя, телефон,
+                  интерес, бюджет).
+                </li>
+                <li data-i18n="ai_ex1_sol_li3">
+                  Валидация и обогащение: проверка телефона, поиск дубликатов в
+                  Google Sheets.
+                </li>
+                <li data-i18n="ai_ex1_sol_li4">
+                  Запись в CRM: создание сделки в Bitrix24 / сохранение в
+                  таблицу.
+                </li>
+                <li data-i18n="ai_ex1_sol_li5">
+                  Уведомления: менеджеру в Telegram — карточка лида с кнопками
+                  «взять в работу», «спам».
+                </li>
+              </ul>
+              <p data-i18n="ai_ex1_stack">
+                <strong>Стэк:</strong> python/aiogram, n8n, OpenAI API, Google
+                Sheets API, Telegram API.
+              </p>
+            </div>
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_res_title">Результат</h3>
+              <ul>
+                <li data-i18n="ai_ex1_res_li1">
+                  Время реакции на лид сократилось с 30 минут до 1 минуты.
+                </li>
+                <li data-i18n="ai_ex1_res_li2">
+                  Потери заявок в нерабочее время — 0.
+                </li>
+                <li data-i18n="ai_ex1_res_li3">
+                  Менеджеры занимаются только тёплыми контактами.
+                </li>
+                <li data-i18n="ai_ex1_res_li4">
+                  Все лиды сохраняются в базе для аналитики.
+                </li>
+              </ul>
+              <div
+                style="
+                  height: 240px;
+                  border-radius: 16px;
+                  border: 1px solid var(--line);
+                  background: url('../assets/example-telegram-flow.png')
+                    center/cover no-repeat;
+                  margin: 20px 0 10px;
+                "
+              ></div>
+              <p style="color: var(--muted)" data-i18n="ai_ex1_scheme">
+                *схема работы: бот → AI → CRM → уведомление
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ПРИМЕР 2: Автопостинг + AI-генерация контента -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="ai_ex2_title">Пример реализации №2</h2>
+            <p data-i18n="ai_ex2_sub">
+              Конвейер контента: от идеи до поста в соцсетях
+            </p>
+          </div>
+          <div class="grid-2">
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_task_title">Задача</h3>
+              <p data-i18n="ai_ex2_task_text">
+                SMM-менеджер тратил 4 часа в день на придумывание постов, подбор
+                картинок и публикацию в пяти каналах. Нужно было увеличить
+                частоту постинга без найма дополнительных людей.
+              </p>
+              <h3 data-i18n="ai_ex1_sol_title">Решение</h3>
+              <ul>
+                <li data-i18n="ai_ex2_sol_li1">
+                  Планировщик идей: Notion / Google Sheets — таблица с темами,
+                  ключевыми словами, форматами.
+                </li>
+                <li data-i18n="ai_ex2_sol_li2">
+                  AI-генерация: по расписанию запускается скрипт, который берёт
+                  тему и с помощью YandexGPT / ChatGPT пишет текст поста
+                  (адаптирует тон под площадку).
+                </li>
+                <li data-i18n="ai_ex2_sol_li3">
+                  Подбор визуала: интеграция с Unsplash или генерация
+                  изображения через Kandinsky / DALL·E.
+                </li>
+                <li data-i18n="ai_ex2_sol_li4">
+                  Публикация: через API или низкоуровневые инструменты
+                  (Telegram, VK, Instagram) пост уходит автоматически.
+                </li>
+              </ul>
+              <p data-i18n="ai_ex2_stack">
+                <strong>Стэк:</strong> n8n, OpenAI, Kandinsky API, Notion API,
+                Telegram Bot API.
+              </p>
+            </div>
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_res_title">Результат</h3>
+              <ul>
+                <li data-i18n="ai_ex2_res_li1">
+                  Время на создание одного поста — 5 минут (вместо 40).
+                </li>
+                <li data-i18n="ai_ex2_res_li2">
+                  Количество постов выросло с 2 до 5 в день.
+                </li>
+                <li data-i18n="ai_ex2_res_li3">
+                  Вовлечённость не упала — контент адаптируется под аудиторию.
+                </li>
+                <li data-i18n="ai_ex2_res_li4">
+                  Менеджер занимается стратегией и общением, а не копирайтингом.
+                </li>
+              </ul>
+              <div
+                style="
+                  height: 240px;
+                  border-radius: 16px;
+                  border: 1px solid var(--line);
+                  background: url('../assets/example-content-flow.png')
+                    center/cover no-repeat;
+                  margin: 20px 0 10px;
+                "
+              ></div>
+              <p style="color: var(--muted)" data-i18n="ai_ex2_scheme">
+                *конвейер: идея → AI текст → AI визуал → публикация
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="ai_price_title">Стоимость автоматизаций</h2>
+            <p data-i18n="ai_price_sub">
+              Подходит и для быстрых MVP-цепочек, и для бизнес-процессов
+            </p>
+          </div>
+          <div class="pricing-grid pricing-grid--3">
+            <article class="price-card reveal">
+              <h3 data-i18n="ai_price_card1">Mini automation</h3>
+              <p data-i18n="ai_price_desc1">
+                Уведомления, простая интеграция, mini-flow
+              </p>
+              <div class="price-tag" data-i18n="ai_price_val1">от $120</div>
+            </article>
+            <article class="price-card reveal">
+              <h3 data-i18n="ai_price_card2">Lead flow / bot flow</h3>
+              <p data-i18n="ai_price_desc2">
+                Лиды, Telegram, CRM, таблицы, квалификация
+              </p>
+              <div class="price-tag" data-i18n="ai_price_val2">от $250</div>
+            </article>
+            <article class="price-card reveal">
+              <h3 data-i18n="ai_price_card3">Complex system</h3>
+              <p data-i18n="ai_price_desc3">
+                Полноценная цепочка для бизнеса с AI и n8n
+              </p>
+              <div class="price-tag" data-i18n="ai_price_val3">от $500</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="freelance-card reveal freelance-card--compact">
+            <div class="freelance-card__content">
+              <div class="pill pill--soft" data-i18n-html="availability_pill">
+                <span class="dot"></span> Available for freelance work
+              </div>
+              <h2 data-i18n="detail_cta_title">Нужен похожий проект?</h2>
+              <p data-i18n="detail_cta_desc">
+                Могу собрать похожий формат под твою задачу: от быстрого теста
+                или одной секции до полноценного проекта.
+              </p>
+            </div>
+            <div class="freelance-card__actions">
+              <a
+                class="btn btn--primary"
+                href="../index.html#contact"
+                data-i18n="detail_cta_btn1"
+                >Обсудить задачу</a
+              >
+              <a
+                class="btn btn--ghost"
+                href="../index.html#pricing"
+                data-i18n="detail_cta_btn2"
+                >Смотреть цены</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../script.js"></script>
+    <a
+      class="telegram-float"
+      href="https://t.me/AlphaDev_web?text=Hello!%20I%20want%20to%20discuss%20a%20project%20with%20AlphaDev.%0A%0AProject%20type:%0ABudget:%0ATimeline:%0ADescription:"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Telegram
+    </a>
+  </body>
+</html>
