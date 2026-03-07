@@ -1132,7 +1132,7 @@ if (langBtn) {
     applyLang(current === "ru" ? "en" : "ru");
   });
 }
-applyLang(localStorage.getItem("lang") || "ru");
+applyLang(localStorage.getItem("lang") || "en");
 
 // ==================== Contact form (улучшенная) ====================
 const leadForm = document.getElementById("leadForm");
