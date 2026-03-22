@@ -3096,3 +3096,16 @@ body.intro-active {
     font-size: 12px;
   }
 }
+
+@media (max-width: 767px) {
+  .faq-card summary {
+    padding-right: 82px !important;
+    line-height: 1.4;
+  }
+
+  .faq-card summary::after {
+    right: 18px !important;
+    width: 44px;
+    height: 44px;
+  }
+}
