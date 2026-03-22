@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AlphaDev — WordPress разработка</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+
+    <script>
+      (function () {
+        try {
+          var key = "alphadev-theme-v2";
+          var theme = localStorage.getItem(key) || "dark";
+          document.documentElement.classList.add("theme-preload");
+          document.addEventListener("DOMContentLoaded", function () {
+            document.documentElement.classList.remove("theme-preload");
+          });
+          if (theme === "light") {
+            document.documentElement.dataset.themeDefault = "light";
+          } else {
+            document.documentElement.dataset.themeDefault = "dark";
+          }
+        } catch (e) {
+          document.documentElement.dataset.themeDefault = "dark";
+        }
+      })();
+    </script>
+  </head>
+  <body class="theme-dark">
+    <div class="noise"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <div class="scroll-progress">
+      <div class="scroll-progress__bar"></div>
+    </div>
+    <div class="noise"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="../index.html#work">
+          <img
+            class="brand__logo"
+            src="../assets/logo.svg"
+            alt="AlphaDev logo"
+          />
+          <span class="brand__text">Alpha<span>Dev</span></span>
+        </a>
+        <nav class="nav" id="nav">
+          <a href="../index.html#services" data-i18n="nav_services">Услуги</a>
+          <a href="../index.html#work" data-i18n="nav_work">Работы</a>
+          <a
+            class="nav__cta"
+            href="../index.html#contact"
+            data-i18n="nav_contact"
+            >Связаться</a
+          >
+        </nav>
+
+        <div class="header-controls">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+            ☀️
+          </button>
+          <button id="langBtn" class="lang-btn" aria-label="Switch language">
+            EN
+          </button>
+        </div>
+
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main style="padding-top: 92px">
+      <!-- HERO / INTRO -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="wp_title">
+              WordPress-сайты с удобной админкой и premium-подачей
+            </h2>
+            <p data-i18n="wp_sub">
+              От быстрых запусков до кастомных решений с ACF, удобной структурой
+              и чистой визуальной системой.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card reveal">
+              <h3 data-i18n="ai_what_title">Что я делаю в WordPress</h3>
+              <ul>
+                <li data-i18n="wp_what_li1">
+                  Разработка кастомных тем с нуля (PHP, ACF, Timber).
+                </li>
+                <li data-i18n="wp_what_li2">
+                  Адаптация готовых шаблонов под задачи заказчика.
+                </li>
+                <li data-i18n="wp_what_li3">
+                  Создание Custom Post Types и таксономий (например, «Домики»,
+                  «Туры»).
+                </li>
+                <li data-i18n="wp_what_li4">
+                  Настройка плагинов (Contact Form 7, WooCommerce, Yoast SEO).
+                </li>
+                <li data-i18n="wp_what_li5">
+                  Оптимизация скорости, безопасности и мобильной версии.
+                </li>
+              </ul>
+
+              <h3 style="margin-top: 18px" data-i18n="ai_approach_title">
+                Подход
+              </h3>
+              <ul>
+                <li data-i18n="wp_approach_li1">
+                  Удобная админка для клиента (ACF-поля, произвольные
+                  настройки).
+                </li>
+                <li data-i18n="wp_approach_li2">Чистый код и семантика.</li>
+                <li data-i18n="wp_approach_li3">
+                  Адаптивность и кроссбраузерность.
+                </li>
+              </ul>
+
+              <div
+                style="
+                  margin-top: 14px;
+                  display: flex;
+                  gap: 10px;
+                  flex-wrap: wrap;
+                "
+              >
+                <a
+                  class="btn btn--primary"
+                  href="../index.html#contact"
+                  data-i18n="ai_btn_request"
+                  >Запросить</a
+                >
+                <a
+                  class="btn btn--ghost"
+                  href="../index.html#work"
+                  data-i18n="ai_btn_back"
+                  >Назад</a
+                >
+              </div>
+            </div>
+
+            <!-- Правая колонка: мини-превью трёх проектов -->
+            <div class="card reveal">
+              <h3 data-i18n="wp_works_title">Мои последние работы</h3>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 10px;
+                  margin: 15px 0 5px;
+                "
+              >
+                <div style="text-align: center">
+                  <img
+                    src="../assets/psyhology.jpg"
+                    alt="Elara Mind "
+                    style="
+                      width: 100%;
+                      height: 100px;
+                      object-fit: cover;
+                      border-radius: 12px;
+                      border: 1px solid var(--line);
+                    "
+                  />
+                  <p
+                    style="
+                      margin-top: 5px;
+                      color: var(--muted);
+                      font-size: 0.8rem;
+                    "
+                    data-i18n="wp_house"
+                  >
+                    Elara Mind
+                  </p>
+                </div>
+                <div style="text-align: center">
+                  <img
+                    src="../assets/Viora.jpg"
+                    alt="Эко-гляминг"
+                    style="
+                      width: 100%;
+                      height: 100px;
+                      object-fit: cover;
+                      border-radius: 12px;
+                      border: 1px solid var(--line);
+                    "
+                  />
+                  <p
+                    style="
+                      margin-top: 5px;
+                      color: var(--muted);
+                      font-size: 0.8rem;
+                    "
+                    data-i18n="wp_glamping"
+                  >
+                    Eco Glamping
+                  </p>
+                </div>
+                <div style="text-align: center">
+                  <img
+                    src="../assets/antarctica.jpg"
+                    alt="Антарктида"
+                    style="
+                      width: 100%;
+                      height: 100px;
+                      object-fit: cover;
+                      border-radius: 12px;
+                      border: 1px solid var(--line);
+                    "
+                  />
+                  <p
+                    style="
+                      margin-top: 5px;
+                      color: var(--muted);
+                      font-size: 0.8rem;
+                    "
+                    data-i18n="wp_antarctica"
+                  >
+                    Antarctica Tour
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ПРИМЕР 1: Elara Mind -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="wp_ex1_title">Пример реализации №1</h2>
+            <p data-i18n="wp_ex1_sub">
+              Elara Mind — премиальный сайт для частной психологической практики
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_task_title">Задача</h3>
+              <p data-i18n="wp_ex1_task">
+                Разработать современный и эстетичный сайт для частного психолога
+                на основе готового макета из Figma. Важно было сохранить
+                премиальную подачу, спокойную визуальную атмосферу, удобную
+                структуру для записи на консультацию и сделать сайт простым в
+                управлении через WordPress.
+              </p>
+
+              <h3 data-i18n="ai_ex1_sol_title">Решение (WordPress)</h3>
+              <ul>
+                <li data-i18n="wp_ex1_sol_li1">
+                  Выполнена вёрстка сайта по индивидуальному макету из Figma с
+                  точной передачей типографики, отступов, цветовой палитры и
+                  общей стилистики.
+                </li>
+                <li data-i18n="wp_ex1_sol_li2">
+                  Сайт собран на WordPress с кастомной темой без перегруженных
+                  шаблонов, чтобы сохранить чистый и дорогой визуальный стиль.
+                </li>
+                <li data-i18n="wp_ex1_sol_li3">
+                  Для редактирования ключевых блоков подключены гибкие поля:
+                  тексты, кнопки, секции услуг, истории, FAQ и контакты.
+                </li>
+                <li data-i18n="wp_ex1_sol_li4">
+                  Реализована форма записи на консультацию и удобная навигация
+                  по всем основным разделам сайта.
+                </li>
+                <li data-i18n="wp_ex1_sol_li5">
+                  Выполнена полная адаптация под мобильные устройства и планшеты
+                  с сохранением аккуратной композиции и читаемости.
+                </li>
+              </ul>
+
+              <p data-i18n="wp_ex1_tools">
+                <strong>Инструменты:</strong> WordPress, Figma, ACF Pro,
+                кастомная тема, HTML, CSS, JavaScript.
+              </p>
+            </div>
+
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_res_title">Результат</h3>
+              <ul>
+                <li data-i18n="wp_ex1_res_li1">
+                  Получился стильный и доверительный сайт, который подчёркивает
+                  экспертность специалиста и премиальный подход к практике.
+                </li>
+                <li data-i18n="wp_ex1_res_li2">
+                  Заказчик получил удобную WordPress-админку для
+                  самостоятельного редактирования контента без необходимости
+                  менять код.
+                </li>
+                <li data-i18n="wp_ex1_res_li3">
+                  Сайт корректно отображается на всех устройствах и помогает
+                  вести пользователей к записи на консультацию.
+                </li>
+              </ul>
+
+              <img
+                src="../assets/psyhology.jpg"
+                alt="ElaraMind — главная"
+                style="
+                  width: 100%;
+                  height: auto;
+                  border-radius: 16px;
+                  margin: 20px 0 10px;
+                "
+              />
+
+              <a
+                href="https://allphadev.github.io/ElaraMind/"
+                class="btn btn--primary"
+                target="_blank"
+                style="margin-top: 10px"
+                data-i18n="web_ex1_btn"
+                >🌐 Посмотреть сайт</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ПРИМЕР 2: Эко-гляминг -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="wp_ex2_title">Пример реализации №2</h2>
+            <p data-i18n="wp_ex2_sub">
+              Viora — премиальный сайт для AI-приложения по продуктивности и
+              питанию
+            </p>
+          </div>
+          <div class="grid-2">
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_task_title">Задача</h3>
+              <p data-i18n="wp_ex2_task">
+                Разработать эффектный премиальный сайт для digital-продукта,
+                который объединяет планирование дня, AI-распознавание еды,
+                подсчёт калорий, метрик состояния и персональные рекомендации в
+                одном приложении. Важно было подчеркнуть технологичность
+                продукта, современный визуальный стиль и сделать подачу сильной
+                для будущих пользователей и инвесторов.
+              </p>
+              <h3 data-i18n="ai_ex1_sol_title">Решение (WordPress)</h3>
+              <ul>
+                <li data-i18n="wp_ex2_sol_li1">
+                  Разработан кастомный интерфейс по индивидуальной
+                  дизайн-концепции с акцентом на тёмную premium-стилистику,
+                  крупную типографику, мягкое свечение и layered UI-композицию.
+                </li>
+                <li data-i18n="wp_ex2_sol_li2">
+                  Реализована адаптивная вёрстка ключевых экранов с точной
+                  передачей структуры hero-блока, карточек метрик, AI-блоков и
+                  продуктовых акцентов.
+                </li>
+                <li data-i18n="wp_ex2_sol_li3">
+                  Продумана визуальная подача функций приложения: deep-focus
+                  planning, AI meal recognition, calorie tracking, readiness
+                  metrics и adaptive coaching.
+                </li>
+                <li data-i18n="wp_ex2_sol_li4">
+                  Добавлены выразительные CTA-блоки, сценарии вовлечения
+                  пользователя и структура, которая помогает быстро донести
+                  ценность продукта.
+                </li>
+                <li data-i18n="wp_ex2_sol_li5">
+                  Сайт адаптирован под мобильные устройства и планшеты с
+                  сохранением визуальной глубины и аккуратной композиции.
+                </li>
+              </ul>
+              <p data-i18n="wp_ex2_tools">
+                Инструменты: Figma, WordPress, кастомная тема, HTML, CSS,
+                JavaScript, ACF Pro.
+              </p>
+            </div>
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_res_title">Результат</h3>
+              <ul>
+                <li data-i18n="wp_ex2_res_li1">
+                  Получился сильный визуальный концепт, который подчёркивает
+                  премиальность и технологичность продукта.
+                </li>
+                <li data-i18n="wp_ex2_res_li2">
+                  Сайт помогает презентовать приложение как цельную экосистему,
+                  а не просто ещё один трекер привычек или калорий.
+                </li>
+                <li data-i18n="wp_ex2_res_li3">
+                  Проект выглядит современно, дорого и хорошо подходит для
+                  презентации продукта пользователям, партнёрам или инвесторам.
+                </li>
+              </ul>
+              <img
+                src="../assets/Viora.jpg"
+                alt="Viora — главная"
+                style="
+                  width: 100%;
+                  height: auto;
+                  border-radius: 16px;
+                  margin: 20px 0 10px;
+                "
+              />
+              <a
+                href="https://allphadev.github.io/Viora/"
+                class="btn btn--primary"
+                target="_blank"
+                style="margin-top: 10px"
+                data-i18n="web_ex1_btn"
+                >🌐 Посмотреть сайт</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ПРИМЕР 3: Antarctica Tour -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="wp_ex3_title">Пример реализации №3</h2>
+            <p data-i18n="wp_ex3_sub">
+              Antarctica Tour — сайт экспедиции в Антарктиду
+            </p>
+          </div>
+          <div class="grid-2">
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_task_title">Задача</h3>
+              <p data-i18n="wp_ex3_task">
+                Создать многостраничный сайт для круизной компании, продающей
+                туры в Антарктиду. Требовалось представить программу, пакеты и
+                побудить к бронированию.
+              </p>
+              <h3 data-i18n="ai_ex1_sol_title">Решение (WordPress)</h3>
+              <ul>
+                <li data-i18n="wp_ex3_sol_li1">
+                  Разработана кастомная тема с поддержкой Custom Post Type
+                  «Туры» и таксономий (месяц, сложность).
+                </li>
+                <li data-i18n="wp_ex3_sol_li2">
+                  Для каждого тура созданы ACF-поля: даты, цена, количество
+                  мест, галерея.
+                </li>
+                <li data-i18n="wp_ex3_sol_li3">
+                  Интегрирован плагин календаря доступности (например, для
+                  выбора даты).
+                </li>
+                <li data-i18n="wp_ex3_sol_li4">
+                  Добавлена мультиязычность (WPML / Polylang) для привлечения
+                  иностранных туристов.
+                </li>
+                <li data-i18n="wp_ex3_sol_li5">
+                  Оптимизирована скорость и SEO.
+                </li>
+              </ul>
+              <p data-i18n="wp_ex3_tools">
+                <strong>Инструменты:</strong> WordPress, ACF, Custom Post Types,
+                WPML, плагин календаря.
+              </p>
+            </div>
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_res_title">Результат</h3>
+              <ul>
+                <li data-i18n="wp_ex3_res_li1">
+                  Заказчик получил функциональный сайт с удобной системой
+                  управления турами.
+                </li>
+                <li data-i18n="wp_ex3_res_li2">
+                  Количество бронирований выросло на 40% после запуска.
+                </li>
+                <li data-i18n="wp_ex3_res_li3">
+                  Сайт высоко оценили за дизайн и удобство навигации.
+                </li>
+              </ul>
+              <img
+                src="../assets/antarctica.jpg"
+                alt="Antarctica Tour — главная"
+                style="
+                  width: 100%;
+                  height: auto;
+                  border-radius: 16px;
+                  margin: 20px 0 10px;
+                "
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="wp_price_title">Стоимость WordPress</h2>
+            <p data-i18n="wp_price_sub">
+              От быстрых правок до сайтов с удобной админкой
+            </p>
+          </div>
+          <div class="pricing-grid pricing-grid--3">
+            <article class="price-card reveal">
+              <h3 data-i18n="wp_price_card1">Fix / setup</h3>
+              <p data-i18n="wp_price_desc1">
+                Правки, формы, плагины, настройка темы
+              </p>
+              <div class="price-tag" data-i18n="wp_price_val1">от $45</div>
+            </article>
+            <article class="price-card reveal">
+              <h3 data-i18n="wp_price_card2">Landing on WordPress</h3>
+              <p data-i18n="wp_price_desc2">
+                Одностраничный сайт с редактируемым контентом
+              </p>
+              <div class="price-tag" data-i18n="wp_price_val2">от $140</div>
+            </article>
+            <article class="price-card reveal">
+              <h3 data-i18n="wp_price_card3">Custom website</h3>
+              <p data-i18n="wp_price_desc3">
+                Несколько страниц, кастомные блоки, ACF, удобная админка
+              </p>
+              <div class="price-tag" data-i18n="wp_price_val3">от $300</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="freelance-card reveal freelance-card--compact">
+            <div class="freelance-card__content">
+              <div class="pill pill--soft" data-i18n-html="availability_pill">
+                <span class="dot"></span> Available for freelance work
+              </div>
+              <h2 data-i18n="detail_cta_title">Нужен похожий проект?</h2>
+              <p data-i18n="detail_cta_desc">
+                Могу собрать похожий формат под твою задачу: от быстрого теста
+                или одной секции до полноценного проекта.
+              </p>
+            </div>
+            <div class="freelance-card__actions">
+              <a
+                class="btn btn--primary"
+                href="../index.html#contact"
+                data-i18n="detail_cta_btn1"
+                >Обсудить задачу</a
+              >
+              <a
+                class="btn btn--ghost"
+                href="../index.html#pricing"
+                data-i18n="detail_cta_btn2"
+                >Смотреть цены</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../script.js"></script>
+    <a
+      class="telegram-float"
+      href="https://t.me/AlphaDev_web?text=Hello!%20I%20want%20to%20discuss%20a%20project%20with%20AlphaDev.%0A%0AProject%20type:%0ABudget:%0ATimeline:%0ADescription:"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Telegram
+    </a>
+  </body>
+</html>

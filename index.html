@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>AlphaDev — Web • Seo • WordPress • UX/UI • AI + Automations</title>
+
+    <meta
+      name="description"
+      content="AlphaDev: самописные сайты, WordPress (custom + templates), UX/UI в Figma, AI + n8n автоматиации и боты."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- favicon (логотип во вкладке) -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+    <!-- Open Graph preview -->
+    <meta
+      property="og:title"
+      content="AlphaDev — Web • WordPress • UX/UI • AI + Automations"
+    />
+    <meta
+      property="og:description"
+      content="Premium websites, UX/UI design and automation systems built for growth."
+    />
+    <meta
+      property="og:image"
+      content="https://allphadev.github.io/assets/preview.jpg"
+    />
+    <meta property="og:url" content="https://allphadev.github.io/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter / Telegram preview -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="AlphaDev — Web • WordPress • UX/UI • AI + Automations"
+    />
+    <meta
+      name="twitter:description"
+      content="Premium websites and automation systems built for growth."
+    />
+    <meta
+      name="twitter:image"
+      content="https://allphadev.github.io/assets/preview.jpg"
+    />
+  </head>
+  <body class="theme-dark">
+    <!-- INTRO VIDEO -->
+    <div class="intro-video" id="introVideo">
+      <video
+        id="introVideoPlayer"
+        class="intro-video__media"
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+      >
+        <source src="assets/video/intro.mp4" type="video/mp4" />
+        Ваш браузер не поддерживает видео.
+      </video>
+      <div class="intro-video__overlay"></div>
+    </div>
+
+    <div class="scroll-progress">
+      <div class="scroll-progress__bar"></div>
+    </div>
+    <div class="noise"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="AlphaDev">
+          <img class="brand__logo" src="assets/logo.svg" alt="AlphaDev logo" />
+          <span class="brand__text">Alpha<span>Dev</span></span>
+        </a>
+
+        <nav class="nav" id="nav">
+          <a href="#work" data-i18n="nav_work">Работы</a>
+          <a href="#process" data-i18n="nav_process">Процесс</a>
+          <a href="#about" data-i18n="nav_about">Обо мне</a>
+          <a href="#pricing" data-i18n="nav_pricing">Цены</a>
+          <a href="#faq" data-i18n="nav_faq">FAQ</a>
+          <a class="nav__cta" href="#contact" data-i18n="nav_contact"
+            >Связаться</a
+          >
+        </nav>
+
+        <div class="header-controls">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+            ☀️
+          </button>
+          <button id="langBtn" class="lang-btn" aria-label="Switch language">
+            EN
+          </button>
+        </div>
+
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Обёртка для всего существующего контента -->
+    <div class="site-wrap" id="siteWrap">
+      <!-- СЮДА ПОМЕСТИТЕ ВЕСЬ СТАРЫЙ КОНТЕНТ -->
+
+      <main id="top">
+        <!-- HERO -->
+        <section class="hero hero--animated" id="heroAnimated">
+          <div class="container hero__grid">
+            <div class="reveal">
+              <div class="pill" data-i18n="hero_pill">
+                <span class="dot"></span> Web • • Seo • WordPress • UX/UI • AI +
+                Automations
+              </div>
+
+              <h1 class="hero__title" id="typewriter">
+                <span class="grad" data-i18n="hero_title_part1"
+                  >Премиальное портфолио разработчика:</span
+                >
+                <span data-i18n="hero_title_part2"
+                  >сайты + дизайн + автоматизации, которые</span
+                >
+                <span class="grad" data-i18n="hero_title_part3"
+                  >дают результат</span
+                >
+              </h1>
+
+              <p class="hero__sub" data-i18n="hero_sub">
+                Я делаю самописные сайты (HTML/CSS/JS), WordPress (кастомные и
+                шаблонные решения), UX/UI макеты в Figma и AI+автоматизации
+                (n8n/боты), чтобы закрывать полный цикл: от дизайна до лидов и
+                процессов.
+              </p>
+
+              <div class="hero__actions">
+                <a
+                  class="btn btn--primary"
+                  href="#contact"
+                  data-i18n="cta_primary"
+                  >Обсудить задачу</a
+                >
+                <a class="btn btn--ghost" href="#work" data-i18n="cta_secondary"
+                  >Смотреть кейсы</a
+                >
+                <a
+                  class="btn btn--ghost"
+                  href="https://t.me/AlphaDev_web?text=Hello!%20I%20want%20to%20discuss%20a%20project%20with%20AlphaDev.%0A%0AProject%20type:%0ABudget:%0ATimeline:%0ADescription:"
+                  target="_blank"
+                  data-i18n="cta_telegram"
+                  >Telegram</a
+                >
+              </div>
+
+              <div class="hero__stats">
+                <div class="stat">
+                  <div class="stat__num" data-count="90" id="stat1">0</div>
+                  <div class="stat__label" data-i18n="stat_lighthouse">
+                    Lighthouse target
+                  </div>
+                </div>
+                <div class="stat">
+                  <div class="stat__num" data-count="5" id="stat2">0</div>
+                  <div class="stat__label" data-i18n="stat_directions">
+                    направления
+                  </div>
+                </div>
+                <div class="stat">
+                  <div class="stat__num" data-count="24" id="stat3">0</div>
+                  <div class="stat__label" data-i18n="stat_response">
+                    часа response
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal hero__right">
+              <div class="glass">
+                <div class="badges">
+                  <div class="badge" data-i18n="badge_delivery">
+                    ⚡ Fast delivery
+                  </div>
+                  <div class="badge badge--alt" data-i18n="badge_code">
+                    ✅ Clean code
+                  </div>
+                  <div class="badge" data-i18n="badge_ux">🧠 UX-first</div>
+                </div>
+
+                <div class="mini">
+                  <div class="mini__row">
+                    <div class="mini__k" data-i18n="mini_web">Web:</div>
+                    <div class="mini__v" data-i18n="mini_web_val">
+                      Landing / Corporate
+                    </div>
+                  </div>
+                  <div class="mini__row">
+                    <div class="mini__k" data-i18n="mini_wp">WP:</div>
+                    <div class="mini__v" data-i18n="mini_wp_val">
+                      Custom / Templates
+                    </div>
+                  </div>
+                  <div class="mini__row">
+                    <div class="mini__k" data-i18n="mini_ui">UX/UI:</div>
+                    <div class="mini__v" data-i18n="mini_ui_val">
+                      Figma systems
+                    </div>
+                  </div>
+                  <div class="mini__row">
+                    <div class="mini__k" data-i18n="mini_ai">AI+Auto:</div>
+                    <div class="mini__v" data-i18n="mini_ai_val">
+                      n8n / Bots / Content
+                    </div>
+                  </div>
+                  <div class="mini__row">
+                    <div class="mini__k" data-i18n="mini_seo">SEO:</div>
+                    <div class="mini__v" data-i18n="mini_seo_val">
+                      Structure / On-page / Growth
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tags">
+                  <div class="tag" data-i18n="tag_ui">Black/White UI</div>
+                  <div class="tag" data-i18n="tag_perf">Performance</div>
+                  <div class="tag" data-i18n="tag_sys">Systems</div>
+                </div>
+              </div>
+
+              <div class="orb orb--1" aria-hidden="true"></div>
+              <div class="orb orb--2" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <div class="hero__bg" aria-hidden="true"></div>
+        </section>
+
+        <section class="section" id="values">
+          <div class="container">
+            <div class="section__head reveal">
+              <h2 data-i18n="value_title">Почему со мной удобно работать</h2>
+              <p data-i18n="value_sub">
+                Подача как у premium-студии, но без перегруза и бюрократии.
+              </p>
+            </div>
+            <div class="grid-3">
+              <div class="card reveal">
+                <div class="card__icon">⚡</div>
+                <h3 data-i18n="value_card1_title">Быстро, но аккуратно</h3>
+                <p data-i18n="value_card1_desc">
+                  Запускаю проект без лишней тянучки, при этом сохраняю качество
+                  и визуальный уровень.
+                </p>
+              </div>
+              <div class="card reveal">
+                <div class="card__icon">🎨</div>
+                <h3 data-i18n="value_card2_title">
+                  Дизайн + код в одной логике
+                </h3>
+                <p data-i18n="value_card2_desc">
+                  Результат не разваливается между макетом и реализацией — всё
+                  выглядит цельно и продуманно.
+                </p>
+              </div>
+              <div class="card reveal">
+                <div class="card__icon">🎯</div>
+                <h3 data-i18n="value_card3_title">Фокус на бизнес-задаче</h3>
+                <p data-i18n="value_card3_desc">
+                  Сайт должен презентовать, усиливать доверие и помогать
+                  получать заявки, а не просто быть красивым.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="tag-marquee">
+          <div class="tag-marquee__track">
+            <div class="tag-marquee__group">
+              <span class="tag-pill">PREMIUM INTERFACES</span>
+              <span class="tag-pill">CREATIVE DEVELOPMENT</span>
+              <span class="tag-pill">WORDPRESS SYSTEMS</span>
+              <span class="tag-pill">AI AUTOMATIONS</span>
+              <span class="tag-pill">CONVERSION-FIRST UX</span>
+              <span class="tag-pill">MOTION DIRECTION</span>
+            </div>
+
+            <div class="tag-marquee__group" aria-hidden="true">
+              <span class="tag-pill">PREMIUM INTERFACES</span>
+              <span class="tag-pill">CREATIVE DEVELOPMENT</span>
+              <span class="tag-pill">WORDPRESS SYSTEMS</span>
+              <span class="tag-pill">AI AUTOMATIONS</span>
+              <span class="tag-pill">CONVERSION-FIRST UX</span>
+              <span class="tag-pill">MOTION DIRECTION</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--dark" id="seo-preview">
+          <div class="container">
+            <div class="section__head reveal">
+              <h2 data-i18n="seo_preview_title">
+                SEO, которое видно не только в дизайне, но и в росте
+              </h2>
+              <p data-i18n="seo_preview_sub">
+                Показываю SEO как часть системы: структура, контент, страницы
+                услуг и понятные точки роста.
+              </p>
+            </div>
+
+            <div class="grid-2 seo-preview-grid">
+              <article class="card reveal seo-copy-card">
+                <div class="card__icon">📈</div>
+                <h3 data-i18n="seo_preview_card_title">Что улучшаем</h3>
+                <p data-i18n="seo_preview_card_desc">
+                  Не просто добавляю мета-теги, а выстраиваю страницу так, чтобы
+                  она лучше читалась людьми и поиском одновременно.
+                </p>
+                <ul>
+                  <li data-i18n="seo_preview_li1">
+                    Семантика и структура под поисковый интент
+                  </li>
+                  <li data-i18n="seo_preview_li2">
+                    Коммерческие блоки, FAQ и контентные зоны
+                  </li>
+                  <li data-i18n="seo_preview_li3">
+                    Внутренняя перелинковка и масштабирование страниц
+                  </li>
+                </ul>
+                <div class="hero__actions" style="margin-top: 18px">
+                  <a
+                    class="btn btn--primary"
+                    href="projects/seo.html"
+                    data-i18n="seo_preview_btn"
+                    >Открыть SEO страницу</a
+                  >
+                </div>
+              </article>
+
+              <article class="card reveal seo-panel">
+                <div class="seo-panel__top">
+                  <span class="badge">SEO</span>
+                  <span class="seo-panel__label" data-i18n="seo_preview_label"
+                    >Growth snapshot</span
+                  >
+                </div>
+
+                <div class="seo-chart">
+                  <div class="seo-chart__grid"></div>
+                  <div class="seo-line seo-line--one"></div>
+                  <div class="seo-line seo-line--two"></div>
+                  <div class="seo-bars">
+                    <span class="seo-bar" style="--h: 32%"></span>
+                    <span class="seo-bar" style="--h: 44%"></span>
+                    <span class="seo-bar" style="--h: 51%"></span>
+                    <span class="seo-bar" style="--h: 58%"></span>
+                    <span class="seo-bar" style="--h: 72%"></span>
+                    <span class="seo-bar" style="--h: 86%"></span>
+                  </div>
+                </div>
+
+                <div class="seo-kpis">
+                  <div class="seo-kpi">
+                    <div class="seo-kpi__num" data-count="3">0</div>
+                    <div class="seo-kpi__text" data-i18n="seo_kpi_1">
+                      ключевых кластера
+                    </div>
+                  </div>
+                  <div class="seo-kpi">
+                    <div class="seo-kpi__num" data-count="12">0</div>
+                    <div class="seo-kpi__text" data-i18n="seo_kpi_2">
+                      точек оптимизации
+                    </div>
+                  </div>
+                  <div class="seo-kpi">
+                    <div class="seo-kpi__num" data-count="90">0</div>
+                    <div class="seo-kpi__text" data-i18n="seo_kpi_3">
+                      готовность к росту
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="section" id="services">
+          <div class="container">
+            <div class="section__head reveal">
+              <h2 data-i18n="services_title">Услуги</h2>
+            </div>
+
+            <div class="workgrid">
+              <article class="card reveal">
+                <div class="card__icon">🧩</div>
+                <h3 data-i18n="service_web_title">Web Development</h3>
+                <p data-i18n="service_web_desc">
+                  Самописная разработка: скорость, эффекты, чистая структура.
+                </p>
+                <ul>
+                  <li data-i18n="service_web_li1">Landing / Corporate</li>
+                  <li data-i18n="service_web_li2">Адаптив + пиксель-перфект</li>
+                  <li data-i18n="service_web_li3">Формы + интеграции</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card__icon">🟦</div>
+                <h3 data-i18n="service_wp_title">WordPress</h3>
+                <p data-i18n="service_wp_desc">
+                  Кастомные и шаблонные решения — быстро и аккуратно.
+                </p>
+                <ul>
+                  <li data-i18n="service_wp_li1">Custom Theme / ACF</li>
+                  <li data-i18n="service_wp_li2">
+                    Template setup + custom blocks
+                  </li>
+                  <li data-i18n="service_wp_li3">Оптимизация и безопасность</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card__icon">🎯</div>
+                <h3 data-i18n="service_ui_title">UX/UI (Figma)</h3>
+                <p data-i18n="service_ui_desc">
+                  Макеты, дизайн-системы, структура под конверсии.
+                </p>
+                <ul>
+                  <li data-i18n="service_ui_li1">Сетка, типографика, UI-kit</li>
+                  <li data-i18n="service_ui_li2">Desktop + Mobile</li>
+                  <li data-i18n="service_ui_li3">Прототипирование</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card__icon">📈</div>
+                <h3 data-i18n="service_seo_title">SEO</h3>
+                <p data-i18n="service_seo_desc">
+                  SEO-структура, базовая оптимизация и рост видимости в поиске.
+                </p>
+                <ul>
+                  <li data-i18n="service_seo_li1">On-page SEO</li>
+                  <li data-i18n="service_seo_li2">Структура + мета-теги</li>
+                  <li data-i18n="service_seo_li3">Контент и точки роста</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card__icon">📈</div>
+                <h3 data-i18n="pricing_seo_title">SEO</h3>
+                <p data-i18n="pricing_seo_desc">
+                  Базовая SEO-настройка, контентная структура и подготовка сайта
+                  к росту.
+                </p>
+                <ul>
+                  <li data-i18n="pricing_seo_1">Start — от $100</li>
+                  <li data-i18n="pricing_seo_2">Standard — от $220</li>
+                  <li data-i18n="pricing_seo_3">Growth — от $350</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card__icon">🤖</div>
+                <h3 data-i18n="service_ai_title">AI + Automations</h3>
+                <p data-i18n="service_ai_desc">
+                  Системы: контент + процессы + лиды. AI не “ради AI”, а ради
+                  результата.
+                </p>
+                <ul>
+                  <li data-i18n="service_ai_li1">n8n pipelines / интеграции</li>
+                  <li data-i18n="service_ai_li2">
+                    Telegram-боты / уведомления
+                  </li>
+                  <li data-i18n="service_ai_li3">
+                    Контент → автопостинг → лид
+                  </li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="cta reveal">
+              <div class="cta__inner">
+                <div>
+                  <h3 data-i18n="cta_title">Нужно быстро показать уровень?</h3>
+                  <p data-i18n="cta_desc">
+                    Могу сделать тест: 1 секция верстки или мини-страница под их
+                    задачу.
+                  </p>
+                </div>
+                <a class="btn btn--primary" href="#contact" data-i18n="cta_btn"
+                  >Написать</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--dark" id="pricing">
+          <div class="container">
+            <div class="section__head reveal">
+              <h2 data-i18n="pricing_title">Цены</h2>
+              <p data-i18n="pricing_sub">
+                Ориентиры по бюджету для самых частых задач
+              </p>
+            </div>
+
+            <div class="grid-4">
+              <article class="card reveal">
+                <div class="card__icon">⚡</div>
+                <h3 data-i18n="pricing_web_title">Custom Code Websites</h3>
+                <p data-i18n="pricing_web_desc">
+                  Самописные сайты и промо-страницы на чистом коде.
+                </p>
+                <ul>
+                  <li data-i18n="pricing_web_1">Start — от $150</li>
+                  <li data-i18n="pricing_web_2">Standard — от $300</li>
+                  <li data-i18n="pricing_web_3">Premium — от $500</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card__icon">🎯</div>
+                <h3 data-i18n="pricing_ui_title">UX/UI & Figma</h3>
+                <p data-i18n="pricing_ui_desc">
+                  Дизайн лендингов, сайтов и интерфейсов в Figma.
+                </p>
+                <ul>
+                  <li data-i18n="pricing_ui_1">Start — от $70</li>
+                  <li data-i18n="pricing_ui_2">Standard — от $140</li>
+                  <li data-i18n="pricing_ui_3">Premium — от $250</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card__icon">🤖</div>
+                <h3 data-i18n="pricing_auto_title">WordPress & Automations</h3>
+                <p data-i18n="pricing_auto_desc">
+                  WordPress-проекты и AI / n8n автоматизации под задачу бизнеса.
+                </p>
+                <ul>
+                  <li data-i18n="pricing_auto_1">Start — от $120</li>
+                  <li data-i18n="pricing_auto_2">Standard — от $250</li>
+                  <li data-i18n="pricing_auto_3">Systems — от $400</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card__icon">📈</div>
+                <h3 data-i18n="pricing_seo_title">SEO</h3>
+                <p data-i18n="pricing_seo_desc">
+                  Базовая SEO-настройка, контентная структура и подготовка сайта
+                  к росту.
+                </p>
+                <ul>
+                  <li data-i18n="pricing_seo_1">Start — от $100</li>
+                  <li data-i18n="pricing_seo_2">Standard — от $220</li>
+                  <li data-i18n="pricing_seo_3">Growth — от $350</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- WORK -->
+        <section class="section section--dark" id="work">
+          <div class="container">
+            <div class="section__head reveal">
+              <h2 data-i18n="work_title">Работы</h2>
+            </div>
+
+            <div class="workgrid workgrid--4">
+              <!-- WEB -->
+              <article
+                class="workcard reveal workcard--bg"
+                style="background-image: url('assets/work-web.png')"
+              >
+                <span class="workchip">Web</span>
+
+                <div class="workcard__body">
+                  <h3 data-i18n="work_web_title">Web — Landing / Corporate</h3>
+                  <p data-i18n="work_web_desc">
+                    Самописная разработка, эффекты, адаптив, скорость.
+                  </p>
+                  <div class="workcard__meta">
+                    <span>HTML/CSS/JS</span>
+                    <a class="link" href="projects/web.html" data-i18n="open"
+                      >Open!</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- SEO -->
+              <article
+                class="workcard reveal workcard--bg"
+                style="background-image: url('assets/Work-seo.png')"
+              >
+                <span class="workchip">SEO</span>
+
+                <div class="workcard__body">
+                  <h3 data-i18n="work_seo_title">SEO — Strategy + On-page</h3>
+                  <p data-i18n="work_seo_desc">
+                    SEO-структура, оптимизация страниц и контент под рост
+                    поиска.
+                  </p>
+                  <div class="workcard__meta">
+                    <span>SEO / Content</span>
+                    <a class="link" href="projects/seo.html" data-i18n="open"
+                      >Open!</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- WORDPRESS -->
+              <article
+                class="workcard reveal workcard--bg"
+                style="background-image: url('assets/work-wp.png')"
+              >
+                <span class="workchip">WP</span>
+
+                <div class="workcard__body">
+                  <h3 data-i18n="work_wp_title">
+                    WordPress — Custom + Templates
+                  </h3>
+                  <p data-i18n="work_wp_desc">
+                    Кастомная тема или шаблон: быстро и аккуратно.
+                  </p>
+                  <div class="workcard__meta">
+                    <span>Theme / ACF</span>
+                    <a
+                      class="link"
+                      href="projects/wordpress.html"
+                      data-i18n="open"
+                      >Open!</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- UX/UI -->
+              <article
+                class="workcard reveal workcard--bg"
+                style="background-image: url('assets/work-ui.png')"
+              >
+                <span class="workchip">UX/UI</span>
+
+                <div class="workcard__body">
+                  <h3 data-i18n="work_ui_title">UX/UI — Figma Systems</h3>
+                  <p data-i18n="work_ui_desc">
+                    Макеты, UI-kit, структура под конверсию.
+                  </p>
+                  <div class="workcard__meta">
+                    <span>Figma</span>
+                    <a class="link" href="projects/uiux.html" data-i18n="open"
+                      >Open!</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- AI + AUTOMATIONS -->
+              <article
+                class="workcard reveal workcard--bg"
+                style="background-image: url('assets/work-ai-auto.png')"
+              >
+                <span class="workchip">AI + Auto</span>
+
+                <div class="workcard__body">
+                  <h3 data-i18n="work_ai_title">AI + Automations — Systems</h3>
+                  <p data-i18n="work_ai_desc">
+                    Контент + автопостинг + лид → CRM / Sheets → Telegram.
+                  </p>
+                  <div class="workcard__meta">
+                    <span>AI / n8n</span>
+                    <a
+                      class="link"
+                      href="projects/ai-automation.html"
+                      data-i18n="open"
+                      >Open!</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- PERFORMANCE -->
+              <article
+                class="workcard reveal workcard--bg"
+                style="background-image: url('assets/Work-perf.png')"
+              >
+                <span class="workchip">Growth</span>
+
+                <div class="workcard__body">
+                  <h3 data-i18n="work_perf_title">
+                    Performance — Speed + Conversion
+                  </h3>
+                  <p data-i18n="work_perf_desc">
+                    Скорость, структура, UX-сигналы и блоки, которые усиливают
+                    конверсию.
+                  </p>
+                  <div class="workcard__meta">
+                    <span>CWV / KPI</span>
+                    <a
+                      class="link"
+                      href="projects/performance.html"
+                      data-i18n="open"
+                      >Open!</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="section" id="process">
+          <div class="container">
+            <div class="section__head reveal">
+              <h2 data-i18n="process_title">Процесс</h2>
+            </div>
+
+            <div class="grid-3">
+              <article class="card reveal">
+                <div class="card__icon">01</div>
+                <h3 data-i18n="process_1_title">Discovery</h3>
+                <p data-i18n="process_1_desc">
+                  Цель, аудитория, структура, контент, CTA.
+                </p>
+                <ul>
+                  <li data-i18n="process_1_li1">Собираю требования</li>
+                  <li data-i18n="process_1_li2">Фиксирую структуру</li>
+                  <li data-i18n="process_1_li3">Договариваемся о формате</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card__icon">02</div>
+                <h3 data-i18n="process_2_title">UX/UI</h3>
+                <p data-i18n="process_2_desc">
+                  Figma: прототип, дизайн-система, адаптив.
+                </p>
+                <ul>
+                  <li data-i18n="process_2_li1">Сетка/типографика</li>
+                  <li data-i18n="process_2_li2">UI kit</li>
+                  <li data-i18n="process_2_li3">Desktop + Mobile</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card__icon">03</div>
+                <h3 data-i18n="process_3_title">Build</h3>
+                <p data-i18n="process_3_desc">
+                  Верстка/WordPress: чисто, быстро, аккуратно.
+                </p>
+                <ul>
+                  <li data-i18n="process_3_li1">HTML/CSS/JS</li>
+                  <li data-i18n="process_3_li2">WP (Custom/Template)</li>
+                  <li data-i18n="process_3_li3">Оптимизация</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card__icon">04</div>
+                <h3 data-i18n="process_4_title">Integrations</h3>
+                <p data-i18n="process_4_desc">
+                  AI + автоматизация: лиды, контент, процессы.
+                </p>
+                <ul>
+                  <li data-i18n="process_4_li1">n8n pipelines</li>
+                  <li data-i18n="process_4_li2">Telegram уведомления</li>
+                  <li data-i18n="process_4_li3">CRM/Sheets</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card__icon">05</div>
+                <h3 data-i18n="process_5_title">Deploy</h3>
+                <p data-i18n="process_5_desc">
+                  Публикация: GitHub/хостинг/домен.
+                </p>
+                <ul>
+                  <li data-i18n="process_5_li1">SSL</li>
+                  <li data-i18n="process_5_li2">Проверка</li>
+                  <li data-i18n="process_5_li3">Чек-лист</li>
+                </ul>
+              </article>
+
+              <article class="card reveal">
+                <div class="card__icon">06</div>
+                <h3 data-i18n="process_6_title">Support</h3>
+                <p data-i18n="process_6_desc">Правки и улучшения по данным.</p>
+                <ul>
+                  <li data-i18n="process_6_li1">Поддержка</li>
+                  <li data-i18n="process_6_li2">Улучшения</li>
+                  <li data-i18n="process_6_li3">Автопроцессы</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section section--dark" id="about">
+          <div class="container">
+            <div class="section__head reveal">
+              <h2 data-i18n="about_title">Обо мне</h2>
+              <p data-i18n="about_sub">Коротко, уверенно, по делу.</p>
+            </div>
+
+            <div class="grid-2">
+              <div class="card reveal">
+                <h3 data-i18n="about_pos_title">Позиционирование</h3>
+                <p data-i18n="about_pos_text">
+                  Основной опыт — самописная разработка сайтов и верстка, плюс
+                  UX/UI в Figma. WordPress использую для проектов, где важна
+                  удобная админка и быстрый запуск (кастомные и шаблонные
+                  решения). AI+автоматизации подключаю, чтобы проект не просто
+                  “выглядел”, а работал как система.
+                </p>
+                <ul>
+                  <li data-i18n="about_pos_li1">Чистый код и структура</li>
+                  <li data-i18n="about_pos_li2">Минималистичный UI</li>
+                  <li data-i18n="about_pos_li3">Интеграции и автоматизация</li>
+                </ul>
+              </div>
+
+              <div class="card reveal">
+                <h3 data-i18n="about_stack_title">Стек</h3>
+                <ul>
+                  <li>HTML / CSS / JavaScript</li>
+                  <li data-i18n="about_stack_wp">
+                    WordPress: Theme / ACF / Templates
+                  </li>
+                  <li>Figma: UX/UI, UI kit</li>
+                  <li>n8n: интеграции, CRM, уведомления</li>
+                  <li>Telegram bots</li>
+                </ul>
+                <a
+                  class="btn btn--primary"
+                  href="#contact"
+                  style="margin-top: 12px"
+                  data-i18n="about_btn"
+                  >Написать</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="faq">
+          <div class="container">
+            <div class="section__head reveal">
+              <h2 data-i18n="faq_title">FAQ</h2>
+              <p data-i18n="faq_sub">
+                Короткие ответы, чтобы закрыть сомнения.
+              </p>
+            </div>
+
+            <div class="faq-grid">
+              <div class="faq-card reveal">
+                <details>
+                  <summary data-i18n="faq_q1">
+                    Вы делаете WordPress на кастомной теме и на шаблонах?
+                  </summary>
+                  <p data-i18n="faq_a1">
+                    Да. Могу собрать быстро на шаблоне (и кастомизировать), либо
+                    сделать кастомную тему + ACF под удобную админку.
+                  </p>
+                </details>
+              </div>
+
+              <div class="faq-card reveal">
+                <details>
+                  <summary data-i18n="faq_q2">
+                    UX/UI — это только дизайн или и логика?
+                  </summary>
+                  <p data-i18n="faq_a2">
+                    И дизайн, и логика. Структура секций, сценарии, CTA, адаптив
+                    — всё в Figma.
+                  </p>
+                </details>
+              </div>
+
+              <div class="faq-card reveal">
+                <details>
+                  <summary data-i18n="faq_q3">
+                    AI + автоматизация — что конкретно?
+                  </summary>
+                  <p data-i18n="faq_a3">
+                    Контент/скрипты/шаблоны + n8n-процессы: автопостинг, сбор
+                    лидов, уведомления, запись в CRM/Sheets.
+                  </p>
+                </details>
+              </div>
+
+              <div class="faq-card reveal">
+                <details>
+                  <summary data-i18n="faq_q4">Можно начать с теста?</summary>
+                  <p data-i18n="faq_a4">
+                    Да. Мини-тест: 1 секция верстки / 1 экран UI /
+                    мини-автоматизация на n8n.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section section--dark" id="contact">
+          <div class="grid-2">
+            <!-- Левая карточка: теперь это реальная .card (со всем hover/spotlight) -->
+            <div class="card reveal contact-info">
+              <h3 data-i18n="contact_info_title">Контакты</h3>
+
+              <p class="muted" data-i18n="contact_info_change">
+                Поменяй на свои:
+              </p>
+
+              <ul class="contact-list">
+                <li>
+                  Email:
+                  <a href="allfaq.co@gmail.com" target="_blank"
+                    >allfaq.co@gmail.com</a
+                  >
+                </li>
+                <li>
+                  Telegram:
+                  <a href="https://t.me/AllphaDev" target="_blank"
+                    >t.me/AllphaDev</a
+                  >
+                </li>
+                <li>
+                  GitHub:
+                  <a href="https://github.com/AllphaDev" target="_blank">
+                    github.com/AllphaDev
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Правая карточка: форма -->
+            <form class="form reveal" id="contactForm">
+              <label>
+                <span data-i18n="form_name_label">Имя</span>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  data-i18n-placeholder="form_name_placeholder"
+                  placeholder="Ваше имя"
+                />
+              </label>
+
+              <label>
+                <span data-i18n="form_email_label">Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  data-i18n-placeholder="form_email_placeholder"
+                  placeholder="name@company.com"
+                />
+              </label>
+
+              <label>
+                <span data-i18n="form_service_label">Услуга</span>
+                <select name="service">
+                  <option value="" data-i18n="form_service_placeholder">
+                    — Выберите —
+                  </option>
+                  <option>Web Development</option>
+                  <option>WordPress</option>
+                  <option>UX/UI</option>
+                  <option>AI + Automations</option>
+                  <option data-i18n="form_service_other">Другое</option>
+                </select>
+              </label>
+
+              <label>
+                <span data-i18n="form_task_label">Задача</span>
+                <textarea
+                  name="message"
+                  rows="5"
+                  required
+                  data-i18n-placeholder="form_task_placeholder"
+                  placeholder="Опишите идею или задачу..."
+                ></textarea>
+              </label>
+
+              <button class="btn btn--primary form__submit" type="submit">
+                <span data-i18n="form_send">Отправить</span>
+              </button>
+
+              <div class="form__status" id="formStatus"></div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <div>© <span id="year"></span> AlphaDev</div>
+          <div class="kbd" data-i18n="footer_tag">
+            One-page • 4 Directions • Premium Minimal
+          </div>
+        </div>
+      </footer>
+
+      <script src="script.js"></script>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </div>
+    <a
+      class="telegram-float"
+      href="https://t.me/AlphaDev_web?text=Hello!%20I%20want%20to%20discuss%20a%20project%20with%20AlphaDev.%0A%0AProject%20type:%0ABudget:%0ATimeline:%0ADescription:"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Telegram
+    </a>
+  </body>
+</html>

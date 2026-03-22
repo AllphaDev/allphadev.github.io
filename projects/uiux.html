@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AlphaDev — UX/UI дизайн</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+
+    <script>
+      (function () {
+        try {
+          var key = "alphadev-theme-v2";
+          var theme = localStorage.getItem(key) || "dark";
+          document.documentElement.classList.add("theme-preload");
+          document.addEventListener("DOMContentLoaded", function () {
+            document.documentElement.classList.remove("theme-preload");
+          });
+          if (theme === "light") {
+            document.documentElement.dataset.themeDefault = "light";
+          } else {
+            document.documentElement.dataset.themeDefault = "dark";
+          }
+        } catch (e) {
+          document.documentElement.dataset.themeDefault = "dark";
+        }
+      })();
+    </script>
+  </head>
+  <body class="theme-dark">
+    <div class="noise"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <div class="scroll-progress">
+      <div class="scroll-progress__bar"></div>
+    </div>
+    <div class="noise"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="../index.html#work">
+          <img
+            class="brand__logo"
+            src="../assets/logo.svg"
+            alt="AlphaDev logo"
+          />
+          <span class="brand__text">Alpha<span>Dev</span></span>
+        </a>
+        <nav class="nav" id="nav">
+          <a href="../index.html#services" data-i18n="nav_services">Услуги</a>
+          <a href="../index.html#work" data-i18n="nav_work">Работы</a>
+          <a
+            class="nav__cta"
+            href="../index.html#contact"
+            data-i18n="nav_contact"
+            >Связаться</a
+          >
+        </nav>
+
+        <div class="header-controls">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+            ☀️
+          </button>
+          <button id="langBtn" class="lang-btn" aria-label="Switch language">
+            EN
+          </button>
+        </div>
+
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main style="padding-top: 92px">
+      <!-- HERO / INTRO -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="ui_title">
+              UX/UI дизайн для сайтов, лендингов и digital-продуктов
+            </h2>
+            <p data-i18n="ui_sub">
+              Интерфейсы, которые выглядят дорого, читаются легко и помогают
+              доводить пользователя до действия.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card reveal">
+              <h3 data-i18n="ai_what_title">Что я делаю</h3>
+              <ul>
+                <li data-i18n="ui_what_li1">
+                  Дизайн лендингов, интернет-магазинов, корпоративных сайтов.
+                </li>
+                <li data-i18n="ui_what_li2">
+                  UX-исследования, прототипирование, CJM.
+                </li>
+                <li data-i18n="ui_what_li3">
+                  Разработка UI-kit / дизайн-систем в Figma.
+                </li>
+                <li data-i18n="ui_what_li4">
+                  Адаптивные макеты под все устройства.
+                </li>
+              </ul>
+
+              <h3 style="margin-top: 18px" data-i18n="ai_approach_title">
+                Подход
+              </h3>
+              <ul>
+                <li data-i18n="ui_approach_li1">
+                  Ориентация на бизнес‑цели и конверсию.
+                </li>
+                <li data-i18n="ui_approach_li2">
+                  Современная эстетика и внимание к деталям.
+                </li>
+                <li data-i18n="ui_approach_li3">
+                  Тесная работа с разработчиками.
+                </li>
+              </ul>
+
+              <div
+                style="
+                  margin-top: 14px;
+                  display: flex;
+                  gap: 10px;
+                  flex-wrap: wrap;
+                "
+              >
+                <a
+                  class="btn btn--primary"
+                  href="../index.html#contact"
+                  data-i18n="ai_btn_request"
+                  >Запросить</a
+                >
+                <a
+                  class="btn btn--ghost"
+                  href="../index.html#work"
+                  data-i18n="ai_btn_back"
+                  >Назад</a
+                >
+              </div>
+            </div>
+
+            <!-- Правая колонка: просто превью трёх проектов (без ссылок) -->
+            <div class="card reveal">
+              <h3 data-i18n="ui_works_title">Мои работы в дизайне</h3>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 10px;
+                  margin: 15px 0 5px;
+                "
+              >
+                <div style="text-align: center">
+                  <img
+                    src="../assets/petclip-preview.jpg"
+                    alt="SmartPetClip"
+                    style="
+                      width: 100%;
+                      height: 100px;
+                      object-fit: cover;
+                      border-radius: 12px;
+                      border: 1px solid var(--line);
+                    "
+                  />
+                  <p
+                    style="
+                      margin-top: 5px;
+                      color: var(--muted);
+                      font-size: 0.8rem;
+                    "
+                    data-i18n="ui_petclip"
+                  >
+                    SmartPetClip
+                  </p>
+                </div>
+                <div style="text-align: center">
+                  <img
+                    src="../assets/nutriboost-preview.jpg"
+                    alt="NutriBoost"
+                    style="
+                      width: 100%;
+                      height: 100px;
+                      object-fit: cover;
+                      border-radius: 12px;
+                      border: 1px solid var(--line);
+                    "
+                  />
+                  <p
+                    style="
+                      margin-top: 5px;
+                      color: var(--muted);
+                      font-size: 0.8rem;
+                    "
+                    data-i18n="ui_nutriboost"
+                  >
+                    NutriBoost
+                  </p>
+                </div>
+                <div style="text-align: center">
+                  <img
+                    src="../assets/antarctica-preview.jpg"
+                    alt="Antarctica Hiro"
+                    style="
+                      width: 100%;
+                      height: 100px;
+                      object-fit: cover;
+                      border-radius: 12px;
+                      border: 1px solid var(--line);
+                    "
+                  />
+                  <p
+                    style="
+                      margin-top: 5px;
+                      color: var(--muted);
+                      font-size: 0.8rem;
+                    "
+                    data-i18n="ui_antarctica"
+                  >
+                    Antarctica
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ПРИМЕР 1: SmartPetClip -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="ui_ex1_title">Пример реализации №1</h2>
+            <p data-i18n="ui_ex1_sub">
+              SmartPetClip — дизайн сайта для продажи собачьих трекеров
+            </p>
+          </div>
+          <div class="grid-2">
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_task_title">Задача</h3>
+              <p data-i18n="ui_ex1_task">
+                Разработать дизайн многостраничного сайта для бренда умных
+                ошейников-трекеров. Нужно было представить несколько моделей
+                (Black, Pink), рассказать о продукте, показать, как это
+                работает, и дать возможность связаться.
+              </p>
+              <h3 data-i18n="ai_ex1_sol_title">Решение</h3>
+              <ul>
+                <li data-i18n="ui_ex1_sol_li1">
+                  Создал главную страницу с крупными визуалами и краткими
+                  характеристиками.
+                </li>
+                <li data-i18n="ui_ex1_sol_li2">
+                  Отдельные страницы для каждой модели с детальным описанием и
+                  фотографиями.
+                </li>
+                <li data-i18n="ui_ex1_sol_li3">
+                  Разделы «О продукте», «Как это работает», контакты.
+                </li>
+                <li data-i18n="ui_ex1_sol_li4">
+                  Адаптивный дизайн под мобильные устройства.
+                </li>
+                <li data-i18n="ui_ex1_sol_li5">
+                  Продумал удобную навигацию и призывы к действию.
+                </li>
+              </ul>
+              <p data-i18n="ui_ex1_tools">
+                <strong>Инструменты:</strong> Figma, авто-лейауты, компоненты.
+              </p>
+            </div>
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_res_title">Результат</h3>
+              <ul>
+                <li data-i18n="ui_ex1_res_li1">
+                  Стильный, современный дизайн, готовый к вёрстке.
+                </li>
+                <li data-i18n="ui_ex1_res_li2">
+                  Заказчик сразу утвердил макет без правок.
+                </li>
+              </ul>
+              <img
+                src="../assets/petclip-preview.jpg"
+                alt="SmartPetClip макет"
+                style="
+                  width: 100%;
+                  height: auto;
+                  border-radius: 16px;
+                  margin: 20px 0 10px;
+                "
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ПРИМЕР 2: Antarctica Hiro -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="ui_ex2_title">Пример реализации №2</h2>
+            <p data-i18n="ui_ex2_sub">
+              Antarctica Hiro — дизайн лендинга экспедиции в Антарктиду
+            </p>
+          </div>
+          <div class="grid-2">
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_task_title">Задача</h3>
+              <p data-i18n="ui_ex2_task">
+                Разработать дизайн лендинга для круиза в Антарктиду. Нужно
+                передать атмосферу приключения, представить программу, варианты
+                кают и побудить к бронированию.
+              </p>
+              <h3 data-i18n="ai_ex1_sol_title">Решение</h3>
+              <ul>
+                <li data-i18n="ui_ex2_sol_li1">
+                  Главная с большим фото ледников, счётчиками (дни, виды
+                  животных) и кнопкой бронирования.
+                </li>
+                <li data-i18n="ui_ex2_sol_li2">
+                  Блок уникальности экспедиции с иконками (киты, пингвины,
+                  айсберги).
+                </li>
+                <li data-i18n="ui_ex2_sol_li3">
+                  Описание судна и программы по дням.
+                </li>
+                <li data-i18n="ui_ex2_sol_li4">
+                  Сетка кают с ценами и деталями.
+                </li>
+                <li data-i18n="ui_ex2_sol_li5">Адаптив под все экраны.</li>
+              </ul>
+              <p data-i18n="ui_ex2_tools">
+                <strong>Инструменты:</strong> Figma, прототипирование, сетки.
+              </p>
+            </div>
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_res_title">Результат</h3>
+              <ul>
+                <li data-i18n="ui_ex2_res_li1">
+                  Эмоциональный и информативный дизайн, вовлекающий в
+                  путешествие.
+                </li>
+                <li data-i18n="ui_ex2_res_li2">
+                  Заказчик получил макет, готовый к вёрстке.
+                </li>
+                <li data-i18n="ui_ex2_res_li3">Проект отмечен на Behance.</li>
+              </ul>
+              <img
+                src="../assets/antarctica-preview.jpg"
+                alt="Antarctica макет"
+                style="
+                  width: 100%;
+                  height: auto;
+                  border-radius: 16px;
+                  margin: 20px 0 10px;
+                "
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ПРИМЕР 3: NutriBoost -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="ui_ex3_title">Пример реализации №3</h2>
+            <p data-i18n="ui_ex3_sub">
+              NutriBoost — дизайн лендинга персонализированных витаминов
+            </p>
+          </div>
+          <div class="grid-2">
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_task_title">Задача</h3>
+              <p data-i18n="ui_ex3_task">
+                Создать двухстраничный дизайн лендинга для сервиса подбора
+                витаминов. Главная страница должна вовлекать в прохождение
+                теста, а страница Benefits — рассказывать о преимуществах.
+              </p>
+              <h3 data-i18n="ai_ex1_sol_title">Решение</h3>
+              <ul>
+                <li data-i18n="ui_ex3_sol_li1">
+                  Главная: яркий заголовок, описание, кнопка «Start Test»,
+                  минималистичный дизайн.
+                </li>
+                <li data-i18n="ui_ex3_sol_li2">
+                  Страница Benefits: перечисление преимуществ (научный подход,
+                  чистые ингредиенты), три шага работы сервиса.
+                </li>
+                <li data-i18n="ui_ex3_sol_li3">
+                  Единая цветовая гамма (зелёный/белый), современная
+                  типографика.
+                </li>
+                <li data-i18n="ui_ex3_sol_li4">
+                  Адаптация под мобильные устройства.
+                </li>
+              </ul>
+              <p data-i18n="ui_ex3_tools">
+                <strong>Инструменты:</strong> Figma, компоненты, сетки.
+              </p>
+            </div>
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_res_title">Результат</h3>
+              <ul>
+                <li data-i18n="ui_ex3_res_li1">
+                  Лаконичный и убедительный дизайн, повышающий доверие.
+                </li>
+                <li data-i18n="ui_ex3_res_li2">
+                  Заказчик получил готовый макет для верстки.
+                </li>
+              </ul>
+              <img
+                src="../assets/nutriboost-preview.jpg"
+                alt="NutriBoost макет"
+                style="
+                  width: 100%;
+                  height: auto;
+                  border-radius: 16px;
+                  margin: 20px 0 10px;
+                "
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="ui_price_title">Стоимость UX/UI</h2>
+            <p data-i18n="ui_price_sub">
+              Без завышения — реальные цены под портфолио и рынок
+            </p>
+          </div>
+          <div class="pricing-grid pricing-grid--3">
+            <article class="price-card reveal">
+              <h3 data-i18n="ui_price_card1">Quick concept</h3>
+              <p data-i18n="ui_price_desc1">
+                1 экран, quick concept, hero или section design
+              </p>
+              <div class="price-tag" data-i18n="ui_price_val1">от $35</div>
+            </article>
+            <article class="price-card reveal">
+              <h3 data-i18n="ui_price_card2">Landing design</h3>
+              <p data-i18n="ui_price_desc2">Полный дизайн лендинга в Figma</p>
+              <div class="price-tag" data-i18n="ui_price_val2">от $80</div>
+            </article>
+            <article class="price-card reveal">
+              <h3 data-i18n="ui_price_card3">Website design</h3>
+              <p data-i18n="ui_price_desc3">
+                Несколько страниц, система, адаптив
+              </p>
+              <div class="price-tag" data-i18n="ui_price_val3">от $180</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="freelance-card reveal freelance-card--compact">
+            <div class="freelance-card__content">
+              <div class="pill pill--soft" data-i18n-html="availability_pill">
+                <span class="dot"></span> Available for freelance work
+              </div>
+              <h2 data-i18n="detail_cta_title">Нужен похожий проект?</h2>
+              <p data-i18n="detail_cta_desc">
+                Могу собрать похожий формат под твою задачу: от быстрого теста
+                или одной секции до полноценного проекта.
+              </p>
+            </div>
+            <div class="freelance-card__actions">
+              <a
+                class="btn btn--primary"
+                href="../index.html#contact"
+                data-i18n="detail_cta_btn1"
+                >Обсудить задачу</a
+              >
+              <a
+                class="btn btn--ghost"
+                href="../index.html#pricing"
+                data-i18n="detail_cta_btn2"
+                >Смотреть цены</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../script.js"></script>
+    <a
+      class="telegram-float"
+      href="https://t.me/AlphaDev_web?text=Hello!%20I%20want%20to%20discuss%20a%20project%20with%20AlphaDev.%0A%0AProject%20type:%0ABudget:%0ATimeline:%0ADescription:"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Telegram
+    </a>
+  </body>
+</html>

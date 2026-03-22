@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AlphaDev — SEO услуги</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+
+    <script>
+      (function () {
+        try {
+          var key = "alphadev-theme-v2";
+          var theme = localStorage.getItem(key) || "dark";
+          document.documentElement.classList.add("theme-preload");
+          document.addEventListener("DOMContentLoaded", function () {
+            document.documentElement.classList.remove("theme-preload");
+          });
+          if (theme === "light") {
+            document.documentElement.dataset.themeDefault = "light";
+          } else {
+            document.documentElement.dataset.themeDefault = "dark";
+          }
+        } catch (e) {
+          document.documentElement.dataset.themeDefault = "dark";
+        }
+      })();
+    </script>
+  </head>
+  <body class="theme-dark">
+    <div class="noise"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <div class="scroll-progress">
+      <div class="scroll-progress__bar"></div>
+    </div>
+    <div class="noise"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="../index.html#work">
+          <img
+            class="brand__logo"
+            src="../assets/logo.svg"
+            alt="AlphaDev logo"
+          />
+          <span class="brand__text">Alpha<span>Dev</span></span>
+        </a>
+        <nav class="nav" id="nav">
+          <a href="../index.html#services" data-i18n="nav_services">Услуги</a>
+          <a href="../index.html#work" data-i18n="nav_work">Работы</a>
+          <a
+            class="nav__cta"
+            href="../index.html#contact"
+            data-i18n="nav_contact"
+            >Связаться</a
+          >
+        </nav>
+
+        <div class="header-controls">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+            ☀️
+          </button>
+          <button id="langBtn" class="lang-btn" aria-label="Switch language">
+            EN
+          </button>
+        </div>
+
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main style="padding-top: 92px">
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="seo_title">
+              SEO для сайтов, которые должны не просто выглядеть, а находиться
+            </h2>
+            <p data-i18n="seo_sub">
+              Помогаю выстроить SEO-основу сайта: структура, мета-теги, тексты,
+              посадочные страницы и рекомендации для роста органического
+              трафика.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card reveal">
+              <h3 data-i18n="seo_what_title">Что я делаю</h3>
+              <ul>
+                <li data-i18n="seo_what_li1">
+                  On-page SEO: title, description, H1-H3, alt, внутренняя
+                  структура.
+                </li>
+                <li data-i18n="seo_what_li2">
+                  SEO-структура страниц и посадочных под услуги, города или
+                  категории.
+                </li>
+                <li data-i18n="seo_what_li3">
+                  Контентные рекомендации: какие блоки, тексты и FAQ усиливают
+                  видимость.
+                </li>
+                <li data-i18n="seo_what_li4">
+                  Техническая база: скорость, индексация, перелинковка, базовая
+                  разметка.
+                </li>
+              </ul>
+
+              <h3 style="margin-top: 18px" data-i18n="seo_approach_title">
+                Подход
+              </h3>
+              <ul>
+                <li data-i18n="seo_approach_li1">
+                  Сначала логика бизнеса и семантика, потом оформление и тексты.
+                </li>
+                <li data-i18n="seo_approach_li2">
+                  Без спама и обещаний 'топ-1 за неделю' — только нормальная
+                  база и рост.
+                </li>
+                <li data-i18n="seo_approach_li3">
+                  SEO учитывается вместе с дизайном, структурой и конверсией.
+                </li>
+              </ul>
+
+              <div
+                style="
+                  margin-top: 14px;
+                  display: flex;
+                  gap: 10px;
+                  flex-wrap: wrap;
+                "
+              >
+                <a
+                  class="btn btn--primary"
+                  href="../index.html#contact"
+                  data-i18n="ai_btn_request"
+                  >Запросить</a
+                >
+                <a
+                  class="btn btn--ghost"
+                  href="../index.html#work"
+                  data-i18n="ai_btn_back"
+                  >Назад</a
+                >
+              </div>
+            </div>
+
+            <div class="card reveal seo-panel seo-panel--page">
+              <h3 data-i18n="seo_looks_title">Что получает клиент</h3>
+              <div class="seo-chart">
+                <div class="seo-chart__grid"></div>
+                <div class="seo-line seo-line--one"></div>
+                <div class="seo-line seo-line--two"></div>
+                <div class="seo-bars">
+                  <span class="seo-bar" style="--h: 28%"></span>
+                  <span class="seo-bar" style="--h: 39%"></span>
+                  <span class="seo-bar" style="--h: 48%"></span>
+                  <span class="seo-bar" style="--h: 60%"></span>
+                  <span class="seo-bar" style="--h: 75%"></span>
+                  <span class="seo-bar" style="--h: 88%"></span>
+                </div>
+              </div>
+              <div class="seo-kpis seo-kpis--wide">
+                <div class="seo-kpi">
+                  <div class="seo-kpi__num" data-count="6">0</div>
+                  <div class="seo-kpi__text" data-i18n="seo_page_kpi_1">
+                    страниц роста
+                  </div>
+                </div>
+                <div class="seo-kpi">
+                  <div class="seo-kpi__num" data-count="18">0</div>
+                  <div class="seo-kpi__text" data-i18n="seo_page_kpi_2">
+                    SEO-точек улучшения
+                  </div>
+                </div>
+                <div class="seo-kpi">
+                  <div class="seo-kpi__num" data-count="95">0</div>
+                  <div class="seo-kpi__text" data-i18n="seo_page_kpi_3">
+                    структурной готовности
+                  </div>
+                </div>
+              </div>
+              <p
+                style="margin-top: 10px; color: var(--muted)"
+                data-i18n="seo_looks_desc"
+              >
+                Итог — сайт, который выглядит премиально, читается понятно и
+                готов к органическому росту.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="seo_growth_title">Как выглядит SEO-рост в подаче</h2>
+            <p data-i18n="seo_growth_sub">
+              На странице можно показать не только услугу, но и саму логику
+              улучшения: структура, динамика и крупные цифры.
+            </p>
+          </div>
+          <div class="grid-3 seo-metric-grid">
+            <article class="card reveal seo-metric-card">
+              <div class="seo-metric-card__num" data-count="12">0</div>
+              <div class="seo-metric-card__label" data-i18n="seo_growth_card1">
+                оптимизированных блоков
+              </div>
+            </article>
+            <article class="card reveal seo-metric-card">
+              <div class="seo-metric-card__num" data-count="8">0</div>
+              <div class="seo-metric-card__label" data-i18n="seo_growth_card2">
+                кластеров под посадочные
+              </div>
+            </article>
+            <article class="card reveal seo-metric-card">
+              <div class="seo-metric-card__num" data-count="24">0</div>
+              <div class="seo-metric-card__label" data-i18n="seo_growth_card3">
+                точки роста и перелинковки
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="seo_ex1_title">Пример реализации №1</h2>
+            <p data-i18n="seo_ex1_sub">
+              SEO-упаковка услуги для локального бизнеса
+            </p>
+          </div>
+          <div class="grid-2">
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_task_title">Задача</h3>
+              <p data-i18n="seo_ex1_task">
+                Нужно было оформить страницу услуги так, чтобы она одновременно
+                выглядела дорого, хорошо читалась и собирала поисковый трафик по
+                коммерческим запросам.
+              </p>
+              <h3 data-i18n="ai_ex1_sol_title">Решение</h3>
+              <ul>
+                <li data-i18n="seo_ex1_sol_li1">
+                  Перестроил первый экран, заголовки и блоки под понятную
+                  поисковую структуру.
+                </li>
+                <li data-i18n="seo_ex1_sol_li2">
+                  Добавил коммерческие секции: преимущества, этапы, FAQ, CTA и
+                  локальные триггеры доверия.
+                </li>
+                <li data-i18n="seo_ex1_sol_li3">
+                  Подготовил title, description и рекомендации по тексту без
+                  переспама.
+                </li>
+              </ul>
+              <p
+                style="margin-top: 14px; color: var(--muted)"
+                data-i18n="seo_ex1_tools"
+              >
+                Инструменты: SEO-структура, copywriting, UX-логика, on-page
+                optimization.
+              </p>
+            </div>
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_res_title">Результат</h3>
+              <ul>
+                <li data-i18n="seo_ex1_res_li1">
+                  Страница стала сильнее и для клиента, и для поисковой системы.
+                </li>
+                <li data-i18n="seo_ex1_res_li2">
+                  Появилась понятная логика масштабирования под другие услуги и
+                  посадочные.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="seo_ex2_title">Пример реализации №2</h2>
+            <p data-i18n="seo_ex2_sub">
+              Контентная структура для multi-page сайта
+            </p>
+          </div>
+          <div class="grid-2">
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_task_title">Задача</h3>
+              <p data-i18n="seo_ex2_task">
+                На проекте нужно было разложить услуги и контент так, чтобы сайт
+                не конкурировал сам с собой и каждая страница отвечала на свой
+                поисковый интент.
+              </p>
+              <h3 data-i18n="ai_ex1_sol_title">Решение</h3>
+              <ul>
+                <li data-i18n="seo_ex2_sol_li1">
+                  Разделил страницы по кластерам: главная, услуги, подуслуги,
+                  FAQ и кейсы.
+                </li>
+                <li data-i18n="seo_ex2_sol_li2">
+                  Продумал внутреннюю перелинковку и логику переходов между
+                  страницами.
+                </li>
+                <li data-i18n="seo_ex2_sol_li3">
+                  Сформировал рекомендации по URL, заголовкам и метаданным для
+                  каждой группы страниц.
+                </li>
+              </ul>
+              <p
+                style="margin-top: 14px; color: var(--muted)"
+                data-i18n="seo_ex2_tools"
+              >
+                Инструменты: information architecture, SEO mapping, internal
+                linking.
+              </p>
+            </div>
+            <div class="card reveal">
+              <h3 data-i18n="ai_ex1_res_title">Результат</h3>
+              <ul>
+                <li data-i18n="seo_ex2_res_li1">
+                  Сайт получил более чистую структуру без каннибализации
+                  запросов.
+                </li>
+                <li data-i18n="seo_ex2_res_li2">
+                  Команде стало проще масштабировать контент и новые посадочные
+                  страницы.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 data-i18n="seo_price_title">SEO pricing</h2>
+            <p data-i18n="seo_price_sub">
+              От базовой оптимизации до структуры роста
+            </p>
+          </div>
+
+          <div class="pricing-grid pricing-grid--3">
+            <article class="price-card reveal">
+              <h3 data-i18n="seo_price_card1">SEO start</h3>
+              <p data-i18n="seo_price_desc1">
+                Базовые мета-теги, заголовки, alt и рекомендации по странице
+              </p>
+              <div class="price-tag" data-i18n="seo_price_val1">от $100</div>
+            </article>
+
+            <article class="price-card reveal">
+              <h3 data-i18n="seo_price_card2">SEO landing</h3>
+              <p data-i18n="seo_price_desc2">
+                Структура, коммерческие блоки, FAQ, контентная логика
+              </p>
+              <div class="price-tag" data-i18n="seo_price_val2">от $220</div>
+            </article>
+
+            <article class="price-card reveal">
+              <h3 data-i18n="seo_price_card3">SEO system</h3>
+              <p data-i18n="seo_price_desc3">
+                Карта страниц, перелинковка, рекомендации по кластерам и
+                масштабированию
+              </p>
+              <div class="price-tag" data-i18n="seo_price_val3">от $350</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="freelance-card reveal freelance-card--compact">
+            <div class="freelance-card__content">
+              <div class="pill pill--soft" data-i18n-html="availability_pill">
+                <span class="dot"></span> Available for freelance work
+              </div>
+              <h2 data-i18n="detail_cta_title">Нужен похожий проект?</h2>
+              <p data-i18n="detail_cta_desc">
+                Могу собрать похожий формат под твою задачу: от быстрого теста
+                или одной секции до полноценного проекта.
+              </p>
+            </div>
+            <div class="freelance-card__actions">
+              <a
+                class="btn btn--primary"
+                href="../index.html#contact"
+                data-i18n="detail_cta_btn1"
+                >Обсудить задачу</a
+              >
+              <a
+                class="btn btn--ghost"
+                href="../index.html#pricing"
+                data-i18n="detail_cta_btn2"
+                >Смотреть цены</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
